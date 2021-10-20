@@ -10,10 +10,16 @@
 
 <body>
 
-    {%for product in products %}
+    <li>
+    {%for product in products | slice(0,3) %}
         {{product}}
     {% endfor %}
-
+    </li>
+    <li>
+    {%for product in products | slice(3,3) %}
+        {{product}}
+    {% endfor %}
+    </li>
     {{dump(products)}}
 </body>
 </html>
